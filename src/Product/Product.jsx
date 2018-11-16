@@ -1,5 +1,7 @@
 import React from 'react'
 import Aside from '../Aside/Aside.jsx'
+import Product__description from './Product__description/Product__description.jsx'
+import Product__settings from './Product__settings/Product__settings.jsx'
 
 const Product = props => {
 
@@ -7,7 +9,8 @@ const Product = props => {
     <main>
         <div className="main --flex">
             <Aside/>
-            Hello
+            <Product__description/>
+            <Product__settings/>
         </div>
     </main>
   )

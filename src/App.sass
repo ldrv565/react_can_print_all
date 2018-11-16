@@ -96,7 +96,7 @@ li, ul
     margin-right: $atom
     img
         @media($medium)
-        height: 30px
+            height: 30px
 .image
     position: relative
     width: 100%
@@ -212,7 +212,8 @@ li, ul
         border-right: 0
         padding-left: 20px
         font-family: gothampromedium
-        width: $atom * 5
+        width: $atom * 7
+        border: 1px solid $grey
         @media($large)
             width: $atom * 4
         @media($medium)
@@ -294,7 +295,7 @@ li, ul
     display: inline-flex
     justify-content: space-between
     flex-wrap: wrap
-    width: ($columns - 9) * $atom
+    width: ($columns - 8) * $atom
     &__nav
         width: 100%
         height: $atom
@@ -407,7 +408,7 @@ $card_margin: $atom/4
     position: relative
     display: inline-block
     margin: 0 $atom
-    width: 5 * $atom
+    width: 4 * $atom
     padding: $atom/2
     background: white
     border-radius: 10px
@@ -458,6 +459,31 @@ $card_margin: $atom/4
         border-radius: 0 10px 10px 10px
     &.--opened
         display: block
+.product
+    &__description
+        display: inline-block
+        width: 13 * $atom
+        border: 1px solid black
+        vertical-align: top
+        margin-right: 2.5 * $atom
+    &__settings
+        display: inline-block
+        width: 7.5 * $atom
+        border: 1px solid black
+        vertical-align: top
+    &__image
+        background: white
+        height: 12 * $atom
+        margin-bottom: $atom
+        .image__img
+            width: 50%
+            margin: auto
+            right: 0
+            bottom: 0
+    &__text
+        color: $grey3
+        li
+            display: list-item
 ///main
 //footer
 .footer
