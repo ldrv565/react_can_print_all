@@ -1,4 +1,5 @@
 import React from 'react'
+import Opener from '../Opener/Opener.jsx'
 
 const Header = props => {
 
@@ -6,23 +7,24 @@ const Header = props => {
     <header>
       <div className="header">
           <div className="header__section">
-              <nav className="nav --grey2">
-                  <a className="nav__item" href="index.html">
-                      Your city
-                  </a>
-                  <a className="nav__item" href="index.html">
-                      Delivery
-                  </a>
-                  <a className="nav__item" href="index.html">
-                      Contact
-                  </a>
-                  <a className="nav__item" href="index.html">
-                      About us
-                  </a>
-                  <a className="nav__item" href="index.html">
-                      Blog
-                  </a>
-              </nav>
+                <Opener/>
+                <nav className="nav --grey2 header__nav">
+                    <a className="nav__item" href="index.html">
+                        Your city
+                    </a>
+                    <a className="nav__item" href="index.html">
+                        Delivery
+                    </a>
+                    <a className="nav__item" href="index.html">
+                        Contact
+                    </a>
+                    <a className="nav__item" href="index.html">
+                        About us
+                    </a>
+                    <a className="nav__item" href="index.html">
+                        Blog
+                    </a>
+                </nav>
           </div>
           <div className="header__section">
               <a className="header__registration_link" href="registration.html">
@@ -41,7 +43,8 @@ const Header = props => {
               <div className="logo" onClick={props.changePage.bind(props.app, "index")}>
                   <img src="img/logo.png" alt="logo"/>
               </div>
-              <div className="nav">
+              <Opener/>
+              <div className="nav header__nav">
                   <a className="nav__item bdhc" href="index.html">
                       <strong>All <br/> Products</strong>
                   </a>

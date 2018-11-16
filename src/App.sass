@@ -94,6 +94,9 @@ li, ul
 .logo
     display: inline-block
     margin-right: $atom
+    img
+        @media($medium)
+        height: 30px
 .image
     position: relative
     width: 100%
@@ -133,14 +136,36 @@ li, ul
     &--small
         height: 40px
         width: 100px
+.nav
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+    &__item
+        display: flex
+        align-items: center
+        margin: 0 $atom/3
+        padding: $atom/3 0
+        border-bottom: .25vw solid transparent
+    &.--grey2
+        color: $grey2
+    &.--opened
+        display: flex
+.opener
+    display: none
+    font-size: 20px
+    line-height: 20px
+    padding: 10px
+    cursor: pointer
+    @media($medium)
+        display: block
 //</глобальные_блоки>
 //<основные_контейнеры>
 //</основные_контейнеры>
 
 //header
 .header
+    position: relative
     display: flex
-    flex-wrap: wrap
     justify-content: space-between
     width: ($columns - 2) * $atom
     padding: 0 $atom
@@ -148,6 +173,19 @@ li, ul
     &__section
         display: flex
         align-items: center
+    &__nav
+        @media($medium)
+            display: none
+            position: absolute
+            top: 40px
+            left: 0
+            z-index: 3
+            background: white
+            width: 100vw
+            height: auto
+            min-height: 40px
+            justify-content: space-between
+            border-top: 1px solid $grey2
     &__registration_link
         color: $grey2
     &__log_in
@@ -161,25 +199,12 @@ li, ul
             max-height: .8 * $atom
     &--height--2
         min-height: 2 * $atom
-.nav
-    display: flex
-    flex-wrap: wrap
-    height: 100%
-    &__item
-        display: flex
-        align-items: center
-        margin: 0 $atom/3
-        padding: $atom/3 0
-        border-bottom: .25vw solid transparent
-    &.--grey2
-        color: $grey2
 .search
     display: flex
     font-size: 12px
     margin-right: $atom
     @media($medium)
-        width: (($columns - 6) * $atom)
-        height: 40px
+        height: 30px
     &__input
         color: $grey2
         border-radius: 5px 0 0 5px
@@ -213,7 +238,7 @@ li, ul
 //main
 .main
     position: relative
-    padding: $atom 0
+    padding: 2 * $atom 0
     background: $light_grey
     &__img
         width: 100%
@@ -246,10 +271,10 @@ li, ul
             background: rgba(white, .6)
 .slider
     margin: auto
-    margin-top: 4 * $atom
+    margin-top: 10%
     width: 150px
-    @media($medium)
-        margin-top: 2 * $atom
+    @media($small)
+        margin: auto
     &__circle
         display: inline-block
         width: 10px
@@ -341,6 +366,8 @@ $card_margin: $atom/4
             opacity: 1
     @media($large)
         width: $card_width + $card_width/3
+    @media($medium)
+        width: $card_width * 2
 .card_advantage
     display: inline-block
     width: 6 * $atom
@@ -377,11 +404,11 @@ $card_margin: $atom/4
         .card_advantage__button
             opacity: 1
 .aside
+    position: relative
     display: inline-block
     margin: 0 $atom
     width: 5 * $atom
     padding: $atom/2
-    overflow: auto
     background: white
     border-radius: 10px
     vertical-align: top
@@ -389,6 +416,15 @@ $card_margin: $atom/4
         font-size: 21px
         @media($large)
             font-size: 14px
+        @media($medium)
+            display: none
+    @media($medium)
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        padding: 0
 .menu
     padding-top: $atom/2
     border: 2px solid $light_grey
@@ -409,6 +445,19 @@ $card_margin: $atom/4
             color: $grey3
     li
         cursor: pointer
+    @media($medium)
+        display: none
+        position: absolute
+        top: 40px
+        left: 0
+        width: 200px
+        background: white
+        z-index: 2
+        padding-left: $atom / 2
+        padding-bottom: $atom / 2
+        border-radius: 0 10px 10px 10px
+    &.--opened
+        display: block
 ///main
 //footer
 .footer
