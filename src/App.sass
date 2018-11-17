@@ -293,7 +293,7 @@ li, ul
             padding-bottom: 4px
 .catalog
     display: inline-flex
-    justify-content: space-between
+    justify-content: space-around
     flex-wrap: wrap
     width: ($columns - 8) * $atom
     &__nav
@@ -304,17 +304,21 @@ li, ul
         border-radius: 10px
         overflow: hidden
         background: white
+        padding-left: 10px
+        @media($medium)
+            padding-top: 14px
+            height: 26px
         .nav__item
             align-items: flex-start
             cursor: pointer
             padding: 0 $atom
             margin: 0
-        @media($medium)
-            height: 2 * $atom
     &.--index
         width: ($columns - 6) * $atom
         .card
             margin-left: $atom/2
+    @media($medium)
+        width: calc(#{(($columns - 3) * $atom)} - 40px)
 
 $card_width: 5.5 * $atom
 $card_margin: $atom/4
@@ -366,16 +370,16 @@ $card_margin: $atom/4
         .card__more
             opacity: 1
     @media($large)
-        width: $card_width + $card_width/3
-    @media($medium)
+        width: $card_width * 1.5
+    @media($small)
         width: $card_width * 2
 .card_advantage
     display: inline-block
     width: 6 * $atom
-    min-width: 180px
     text-align: left
     margin: 0 $atom/2
     margin-bottom: $atom
+    min-width: 220px
     cursor: pointer
     font-family: gothampro
     &__image
@@ -404,6 +408,10 @@ $card_margin: $atom/4
             box-shadow: 30px 10px 50px rgba(black, .05)
         .card_advantage__button
             opacity: 1
+    @media($large)
+        min-width: 150px
+    @media($medium)
+        width: $card_width * 2
 .aside
     position: relative
     display: inline-block
