@@ -49,12 +49,12 @@ const Index = props => {
                 </div>
             </div>
         </div>
-        <div className="main --center ">
+        <div className="main --center --index">
             <div className="title">
-                FEAUTERED PRODUCTS
+                FEATUERED PRODUCTS
             </div>
             <div className="subtitle c">
-                CATEGORIES
+                CATEGORY
             </div>
             <div className="catalog --index">
             <Card app = {props.app} changePage={props.changePage}/>
@@ -67,7 +67,7 @@ const Index = props => {
             <Card app = {props.app} changePage={props.changePage}/>
             </div>
         </div>
-        <div className="main --center --white">
+        <div className="main --center --white --index">
             <div className="title">
                 ADVANTAGES
             </div>

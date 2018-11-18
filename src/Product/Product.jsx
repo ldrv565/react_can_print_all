@@ -7,10 +7,12 @@ const Product = props => {
 
   return (
     <main>
-        <div className="main --flex">
+        <div className="main">
             <Aside/>
-            <Product__description/>
-            <Product__settings/>
+            <div className="product">
+              <Product__description/>
+              <Product__settings/>
+            </div>
         </div>
     </main>
   )

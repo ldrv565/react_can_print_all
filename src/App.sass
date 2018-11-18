@@ -28,6 +28,7 @@ $atom: 100vw / $columns
 $grey: #d4ddeb
 $grey2: #b2bcc8
 $grey3: #c1c1c1
+$grey4: #6e6e6e
 $light_grey: #f7f7f7
 $black: #2f2f2f
 //</цвета>
@@ -158,6 +159,22 @@ li, ul
     cursor: pointer
     @media($medium)
         display: block
+.text
+    color: $grey2
+    font-size: 14px
+    font-family: gothampro
+    li
+        display: list-item
+    &.--grey3
+        color: $grey3
+    &.--bold
+        font-family: gothamprobold
+    &.--lighter
+        font-family: gothamprolighter
+        &.--bold
+            font-weight: bold
+    &.--uppercase
+        text-transform: uppercase
 //</глобальные_блоки>
 //<основные_контейнеры>
 //</основные_контейнеры>
@@ -170,6 +187,7 @@ li, ul
     width: ($columns - 2) * $atom
     padding: 0 $atom
     border-bottom: 1px solid $grey2
+    font-size: 14px
     &__section
         display: flex
         align-items: center
@@ -239,7 +257,7 @@ li, ul
 //main
 .main
     position: relative
-    padding: 2 * $atom 0
+    padding: $atom 0
     background: $light_grey
     &__img
         width: 100%
@@ -251,6 +269,8 @@ li, ul
         background: white
     &.--white
         background: white
+    &.--index
+        padding: 2 * $atom 0
 .promo
     position: absolute
     top: 0
@@ -293,7 +313,7 @@ li, ul
             padding-bottom: 4px
 .catalog
     display: inline-flex
-    justify-content: space-around
+    justify-content: space-between
     flex-wrap: wrap
     width: ($columns - 8) * $atom
     &__nav
@@ -468,17 +488,31 @@ $card_margin: $atom/4
     &.--opened
         display: block
 .product
+    display: inline-block
+    width: ($columns - 8) * $atom
     &__description
         display: inline-block
         width: 13 * $atom
-        border: 1px solid black
         vertical-align: top
         margin-right: 2.5 * $atom
+        @media($extra_large)
+            margin-right: $atom
+        @media($medium)
+            width: calc(#{(($columns - 3) * $atom)} - 40px)
     &__settings
         display: inline-block
         width: 7.5 * $atom
-        border: 1px solid black
+        padding-top: $atom
         vertical-align: top
+        .title
+            font-size: 26px
+            padding-bottom: $atom/2
+            @media($large)
+                font-size: inherit
+        @media($extra_large)
+            width: 12 * $atom
+        @media($medium)
+            width: calc(#{(($columns - 3) * $atom)} - 40px)
     &__image
         background: white
         height: 12 * $atom
@@ -488,10 +522,103 @@ $card_margin: $atom/4
             margin: auto
             right: 0
             bottom: 0
-    &__text
-        color: $grey3
-        li
-            display: list-item
+            @media($medium)
+                width: auto
+                height: 50%
+    &__totalprice
+        width: 100%
+        text-align: right
+        font-size: 21px
+        color: $grey4
+        margin-bottom: $atom/2
+        @media($medium)
+            font-size: 14px
+    &__cost
+        font-size: 41px
+        font-family: gothamprobold
+        @media($medium)
+            font-size: 21px
+    @media($medium)
+        width: calc(#{(($columns - 3) * $atom)} - 40px)
+.setting
+    padding: $atom/2 0
+    border-bottom: 3px solid $grey2
+    &__header
+        padding-bottom: $atom/4
+    &__content
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+    &__image
+        width: 24%
+        height: 1.75 * $atom
+        margin-bottom: $atom/8
+        cursor: pointer
+        @media($extra_large)
+            height: 2.75 * $atom
+        @media($medium)
+            height: 6.5 * $atom
+    &__element
+        display: flex
+        justify-content: center
+        width: 24%
+        padding: 13px 0
+        margin: 5px 0
+        background: white
+        color: $grey2
+        cursor: pointer
+        font-family: gothamprolighter
+        font-weight: bold
+        font-size: 14px
+        &.--orientation
+            width: 48.5%
+        &.--select
+            display: block
+            position: relative
+            .select_button
+                display: flex
+                justify-content: space-between
+                width: 70%
+                margin: auto
+                .select_value
+                .select_arrow
+                    transform: rotate(45deg)
+            .select_list
+                display: none
+                position: absolute
+                left: 0
+                right: 0
+                background: white
+                z-index: 1
+                .setting__element
+                    width: 86%
+                    padding-left: 14%
+                    justify-content: flex-start
+                &.--opened
+                    display: block
+    .button
+        margin-top: $atom/2
+        margin-left: auto
+    &.--dropDown
+        .setting__header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            cursor: pointer
+        .dropDown_arrow
+            font-size: 21px
+            transform: rotate(45deg)
+            &.--rotate
+                transform: rotate(-135deg)
+        .setting__content
+            display: none
+            .text
+                width: 75%
+            &.--opened
+                display: flex
+    &.--border0
+        border: 0
 ///main
 //footer
 .footer
