@@ -120,28 +120,28 @@ const Product__settings = props => {
           </Text>
         </Setting__header>
         <Setting__content>
-          <div className="image setting__image">
+          <div className="image setting__image s3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
-          <div className="image setting__image">
+          <div className="image setting__image sh3">
             <img className="image__img" src="img/material.jpg" alt="material"/>
           </div>
         </Setting__content>
