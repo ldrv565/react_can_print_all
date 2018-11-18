@@ -18,10 +18,10 @@ const Header = props => {
                     <a className="nav__item" href="index.html">
                         Contact
                     </a>
-                    <a className="nav__item" href="index.html">
+                    <a className="nav__item" onClick={props.changePage.bind(props.app, "about")}>
                         About us
                     </a>
-                    <div className="nav__item" href="index.html" onClick={props.changePage.bind(props.app, "articles")}>
+                    <div className="nav__item" onClick={props.changePage.bind(props.app, "articles")}>
                         Blog
                     </div>
                 </nav>

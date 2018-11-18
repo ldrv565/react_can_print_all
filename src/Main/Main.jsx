@@ -6,6 +6,8 @@ import Order from '../Order/Order.jsx';
 import Orders from '../Orders/Orders.jsx';
 import Articles from '../Articles/Articles.jsx';
 import Article from '../Article/Article.jsx';
+import About from '../About/About.jsx';
+
 const Main = props => {
     return (
         props.app.state.currentPage === "index"?
@@ -31,6 +33,8 @@ const Main = props => {
         />:
         props.app.state.currentPage === "article"?
         <Article/>:
+        props.app.state.currentPage === "about"?
+        <About/>:
         <div></div>
     )
 }
