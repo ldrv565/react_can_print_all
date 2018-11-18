@@ -3,6 +3,7 @@ import Index from '../Index/Index.jsx';
 import Products from '../Products/Products.jsx';
 import Product from '../Product/Product.jsx';
 import Order from '../Order/Order.jsx';
+import Orders from '../Orders/Orders.jsx';
 const Main = props => {
     return (
         props.app.state.currentPage === "index"?
@@ -19,6 +20,8 @@ const Main = props => {
         <Product/>:
         props.app.state.currentPage === "order"?
         <Order/>:
+        props.app.state.currentPage === "orders"?
+        <Orders/>:
         <div></div>
     )
 }

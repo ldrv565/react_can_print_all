@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from '../Table/Table.jsx'
 
-const Products = props => {
+const Order = props => {
 
   return (
     <main>
@@ -29,4 +29,4 @@ const Products = props => {
 }
 
 
-export default Products
+export default Order

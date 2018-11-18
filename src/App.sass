@@ -203,11 +203,11 @@ li, ul
         color: $grey2
         background: white
         border: 0
+        text-transform: uppercase
         th
             padding: $atom * .4 0
-            text-transform: uppercase
-            @media($medium)
-                text-transform: unset
+        @media($medium)
+            text-transform: unset
     &__image
         width: 60px
         height: 60px
@@ -220,8 +220,32 @@ li, ul
         font-family: gothamprobold
         @media($large)
             font-size: 1em
+    &__done
+        background: $light_grey
+        color: $grey4
+        text-transform: lowercase
     @media($small)
         width: ($columns - 1) * $atom
+    &.--dropDown
+        display: table
+        margin-bottom: 10px
+        width: ($columns - 8) * $atom
+        @media($medium)
+            width: calc(#{(($columns - 3) * $atom)} - 50px)
+        thead
+            cursor: pointer
+            .name
+                color: $grey4
+                text-transform: none
+        tbody
+            display: none
+            background: white
+            &.--opened
+                display: table-row-group
+        tr
+            border: 0
+.tables
+    display: inline-block
 .buttons_box
     display: flex
     align-items: center
@@ -246,6 +270,11 @@ li, ul
         width: 17%
         @media($medium)
             width: 50%
+.dropDown_arrow
+    font-size: 21px
+    transform: rotate(45deg)
+    &.--rotate
+        transform: rotate(-135deg)
 //</глобальные_блоки>
 //<основные_контейнеры>
 //</основные_контейнеры>
@@ -666,11 +695,6 @@ $card_margin: $atom/4
             justify-content: space-between
             align-items: center
             cursor: pointer
-        .dropDown_arrow
-            font-size: 21px
-            transform: rotate(45deg)
-            &.--rotate
-                transform: rotate(-135deg)
         .setting__content
             display: none
             .text

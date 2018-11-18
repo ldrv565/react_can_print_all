@@ -33,7 +33,7 @@ const Header = props => {
               <div className="header__log_in bgc">
                   In
               </div>
-              <div className="header__user_photo">
+              <div className="header__user_photo"onClick={props.changePage.bind(props.app, "orders")}>
                   <img src="img/user_photo.png" alt="user"/>
               </div>
           </div>
