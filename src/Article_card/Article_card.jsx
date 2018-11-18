@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = props => {
+const Article_card = props => {
 
   return (
     <a className="article_card sh" onClick={props.changePage.bind(props.app, "article")}>
@@ -23,4 +23,4 @@ const Card = props => {
 }
 
 
-export default Card
+export default Article_card

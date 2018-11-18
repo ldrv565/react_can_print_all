@@ -732,13 +732,34 @@ $card_margin: $atom/4
         margin-top: $atom/2
         padding-left: $atom 
         padding-right: $atom
+.content
+    width: 20 * $atom
+    margin: auto
+    margin-top: $atom
+    font-family: gothampro
+    color: $grey3
+    h2
+        font-size: 21px
+        font-family: gothamprobold
+        margin-bottom: $atom
+        color: $grey4
+    li
+        display: list-item
+    img
+        width: 40%
+        float: right
+        padding-left: $atom
+        padding-bottom: $atom
+    @media($extra_large)
+        width: 25 * $atom
+    @media($medium)
+        width: 30 * $atom
 ///main
 //footer
 .footer
     display: flex
     flex-wrap: wrap
     justify-content: center
-    flex-wrap: wrap
     padding-top: 2 * $atom
     padding-bottom: $atom
     font-size: 12px
