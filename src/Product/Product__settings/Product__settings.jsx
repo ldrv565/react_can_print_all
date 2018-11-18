@@ -148,8 +148,8 @@ const Product__settings = props => {
       </Setting>
       <Setting className="--border0">
         <Setting__content>
-          <div className="product__totalprice">
-            TOTAL PRICE: <span className="product__cost c">$120</span>
+          <div className="totalprice">
+            TOTAL PRICE: <span className="totalprice__cost c">$120</span>
           </div>
           <Setting_button className="--orientation">
             Order design

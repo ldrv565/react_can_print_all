@@ -6,7 +6,7 @@ const Products = props => {
 
   return (
     <main>
-        <div className="main --flex">
+        <div className="main">
             <Aside/>
             <div className="catalog">
                 <div className="nav --grey2 catalog__nav">

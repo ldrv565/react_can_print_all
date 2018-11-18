@@ -67,12 +67,12 @@ const Header = props => {
                   <input className="search__input s" type="text" defaultValue="search"/>
                   <div className="search__button bgc">SEARCH</div>
               </div>
-              <a className="bug" href="index.html">
+              <div className="bug" href="index.html" onClick={props.changePage.bind(props.app, "order")}>
                   <img src="img/bug.png" alt="bug"/>
                   <div className="bug__count bgc">
                       1
                   </div>
-              </a>
+              </div>
           </div>
       </div>
   </header>
