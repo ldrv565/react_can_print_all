@@ -4,6 +4,8 @@ import Products from '../Products/Products.jsx';
 import Product from '../Product/Product.jsx';
 import Order from '../Order/Order.jsx';
 import Orders from '../Orders/Orders.jsx';
+import Articles from '../Articles/Articles.jsx';
+import Article from '../Article/Article.jsx';
 const Main = props => {
     return (
         props.app.state.currentPage === "index"?
@@ -22,6 +24,13 @@ const Main = props => {
         <Order/>:
         props.app.state.currentPage === "orders"?
         <Orders/>:
+        props.app.state.currentPage === "articles"?
+        <Articles
+            app = {props.app}
+            changePage={props.changePage}
+        />:
+        props.app.state.currentPage === "article"?
+        <Article/>:
         <div></div>
     )
 }

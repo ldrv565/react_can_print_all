@@ -703,6 +703,35 @@ $card_margin: $atom/4
                 display: flex
     &.--border0
         border: 0
+.article_card
+    color: $grey4
+    cursor: pointer
+    margin: auto
+    margin-bottom: $atom/2
+    padding: $atom/2
+    &__image
+        display: inline-block
+        width: 5 * $atom
+        height: 5 * $atom
+        margin: auto
+    &__box
+        display: inline-block
+        width: 10 * $atom
+        margin-top: $atom / 1.5
+        margin-left: $atom / 1.5
+        vertical-align: top
+        @media($extra_large)
+            width: 18 * $atom
+        @media($medium)
+            width: 22 * $atom
+    &__title
+        font-size: 24px
+        @media($medium)
+            font-size: unset
+    &__button
+        margin-top: $atom/2
+        padding-left: $atom 
+        padding-right: $atom
 ///main
 //footer
 .footer

@@ -21,9 +21,9 @@ const Header = props => {
                     <a className="nav__item" href="index.html">
                         About us
                     </a>
-                    <a className="nav__item" href="index.html">
+                    <div className="nav__item" href="index.html" onClick={props.changePage.bind(props.app, "articles")}>
                         Blog
-                    </a>
+                    </div>
                 </nav>
           </div>
           <div className="header__section">
@@ -33,7 +33,7 @@ const Header = props => {
               <div className="header__log_in bgc">
                   In
               </div>
-              <div className="header__user_photo"onClick={props.changePage.bind(props.app, "orders")}>
+              <div className="header__user_photo" onClick={props.changePage.bind(props.app, "orders")}>
                   <img src="img/user_photo.png" alt="user"/>
               </div>
           </div>
