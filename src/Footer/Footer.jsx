@@ -1,9 +1,17 @@
 import React from 'react'
-
+import Modal from '../Modal/Modal.jsx';
+import Modal__order from '../Modal/Modal__order/Modal__order.jsx';
+import Modal__orderDesign from '../Modal/Modal__orderDesign/Modal__orderDesign.jsx';
+import Modal__login from '../Modal/Modal__login/Modal__login.jsx';
 const Footer = props => {
 
   return (
     <footer>
+        <Modal>
+            <Modal__order/>
+            <Modal__orderDesign/>
+            <Modal__login/>
+        </Modal>
         <div className="footer">
             <a className="logo footer__logo" href="index.html">
                 <img src="img/logo.png" alt="logo"/>

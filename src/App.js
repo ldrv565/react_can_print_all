@@ -7,7 +7,7 @@ import Footer from './Footer/Footer'
 class App extends Component {
 
   state = {
-    currentPage: "about"
+    currentPage: "product"
   }
 
   changePageHandler = (currentPage) => {

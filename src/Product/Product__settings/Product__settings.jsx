@@ -7,7 +7,14 @@ import Setting_select from './Setting/Setting__content/Setting_select/Setting_se
 import Text from '../../Core/Text.jsx'
 
 const Product__settings = props => {
-
+  this.openOrder = () => {
+    document.getElementsByClassName("modal")[0].classList.toggle("--opened")
+    document.getElementsByClassName("--order")[0].classList.toggle("--opened")
+  }
+  this.openOrderDesign = () => {
+    document.getElementsByClassName("modal")[0].classList.toggle("--opened")
+    document.getElementsByClassName("--orderDesign")[0].classList.toggle("--opened")
+  }
   return (
     <div className="product__settings">
       <div className="title">
@@ -151,13 +158,13 @@ const Product__settings = props => {
           <div className="totalprice">
             TOTAL PRICE: <span className="totalprice__cost c">$120</span>
           </div>
-          <Setting_button className="--orientation">
+          <Setting_button className="--orientation" onClick={this.openOrderDesign}>
             Order design
           </Setting_button>
           <Setting_button className="--orientation">
             Add your design
           </Setting_button>
-          <div className="button bgc s2">
+          <div className="button bgc s2" onClick={this.openOrder}>
               ADD TO BUSKET
           </div>
         </Setting__content>

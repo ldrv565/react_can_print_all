@@ -275,6 +275,53 @@ li, ul
     transform: rotate(45deg)
     &.--rotate
         transform: rotate(-135deg)
+    @media($medium)
+        font-size: 14px
+.modal
+    position: fixed
+    display: none
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(black, .1)
+    text-align: center
+    &__window
+        display: none
+        width: 250px
+        margin: auto
+        padding: 40px
+        border-radius: 10px
+        background: white
+        &.--opened
+            display: block
+    &__input, &__text
+        width: 100%
+        border: 0
+        border-bottom: 2px solid black
+        padding: 10px 0
+        text-align: center
+        font-family: gothampro
+    &__text
+        width: 90%
+        margin-top: 20px
+        padding: 0
+        border: 1px solid black
+        text-align: left
+        height: 80px
+        font-size: 12px
+        resize: none
+        outline: none
+        padding: 5%
+        @media($medium)
+            height: 30px
+    &__button
+        margin-top: 20px
+        padding-left: 50px
+        padding-right: 50px
+    &.--opened
+        display: flex
+
 //</глобальные_блоки>
 //<основные_контейнеры>
 //</основные_контейнеры>
@@ -315,8 +362,34 @@ li, ul
     &__user_photo
         img
             max-height: .8 * $atom
+            min-height: 30px
+    &__sub_nav_open:hover
+        .header_sub_nav
+            display: block
     &--height--2
         min-height: 2 * $atom
+.header_sub_nav
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    z-index: 1
+    border: 1px solid black
+    background: white
+    padding-left: 2 * $atom
+    font-family: gothampro
+    &__item
+        display: inline-block
+        margin: $atom
+        vertical-align: top 
+        ul
+            padding-top: $atom/2
+            li
+                padding: 5px 0
+                &:hover
+                    font-weight: bold
+
 .search
     display: flex
     font-size: 12px
@@ -470,9 +543,10 @@ $card_margin: $atom/4
         color: $grey2
         margin-bottom: $atom/2
     &__cost
+        position: relative
         font-size: 24px
         font-family: gothamprobold
-        margin-bottom: $atom/2
+        padding-bottom: $atom/2
         @media($large)
             font-size: 16px
     &__from
