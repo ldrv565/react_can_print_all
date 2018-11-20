@@ -1,4 +1,5 @@
 import React from 'react'
+import AsideHeader from '../AsideHeader/AsideHeader.jsx'
 
 const About = props => {
 
@@ -48,7 +49,8 @@ const About = props => {
                     </div>
                 </div>
             </div>
-            <div className="content">
+            <AsideHeader/>
+            <div className="content --inline">
                 <h2>Our company</h2>
                 <img src="./img/article1.jpg" alt="article"/>
                 <p>Rain or shine, make sure your message gets seen with durable, high-quality mesh banners. The water- and UV- resistant material makes them one of our most weatherproof products. Built-in grommets (included free of charge) make it easy to hang them wherever you want. And the mesh weave minimizes the effect of wind by letting it pass right through. It’s time to get noticed by more customers – no matter what’s in the forecast.</p>

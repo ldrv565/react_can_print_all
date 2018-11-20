@@ -1,5 +1,5 @@
 import React from 'react'
-import Aside from '../Aside/Aside.jsx'
+import AsideHeader from '../AsideHeader/AsideHeader.jsx'
 import Article_card from '../Article_card/Article_card.jsx'
 
 const Articles = props => {
@@ -52,8 +52,8 @@ const Articles = props => {
                 </div>
             </div>
             <div className="main">
-                <Aside/>
-                <div className="catalog">
+                <AsideHeader/>
+                <div className="catalog --articles">
                     <Article_card app = {props.app} changePage={props.changePage}/>
                     <Article_card app = {props.app} changePage={props.changePage}/>
                     <Article_card app = {props.app} changePage={props.changePage}/>

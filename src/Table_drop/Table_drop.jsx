@@ -18,7 +18,7 @@ const Table_drop = props => {
                 <tr className="table__head">
                     <th className="c">1</th>
                     <th>
-                        <div className="image table__image"><img className="image__img" src="./img/material.jpg" alt="table"/></div>
+                        <div className="image table__image --small"><img className="image__img" src="./img/order.png" alt="order"/></div>
                     </th>
                     <th className="name">Order 1</th>
                     <th></th>
@@ -33,7 +33,7 @@ const Table_drop = props => {
                 <tr>
                     <td className="c">1</td>
                     <td>
-                        <div className="image table__image"><img className="image__img" src="./img/material.jpg" alt="table"/></div>
+                        <div className="image table__image --small"><img className="image__img" src="./img/material.jpg" alt="table"/></div>
                     </td>
                     <td>CANVAS design abstract wawes color 1</td>
                     <td>400 x 600mm</td>
@@ -46,7 +46,7 @@ const Table_drop = props => {
                 <tr>
                     <td className="c">1</td>
                     <td>
-                        <div className="image table__image"><img className="image__img" src="./img/material.jpg" alt="table"/></div>
+                        <div className="image table__image --small"><img className="image__img" src="./img/material.jpg" alt="table"/></div>
                     </td>
                     <td>CANVAS design abstract wawes color 1</td>
                     <td>400 x 600mm</td>
